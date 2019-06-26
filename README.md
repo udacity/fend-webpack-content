@@ -6,8 +6,12 @@ If you want to follow along, start from master and look at the numbered branches
 
 ## Breakdown of steps:
 
-### 1. Adding Webpack
+### 1. Adding an API call
 
-Adds a webpack config file and the express-friendly architecture to go with it. 
+Title says it all, but I think this part is important because I have found that most webpack tutorials stop at a successful local build and never address how to deal with things like Express routes and API responses.
 
-### 2. 
+### 2. Adding Webpack
+
+Adds a webpack config file and the express-friendly architecture to go with it. I might break this step down into smaller chunks because this is a large step, but the idea is to set up Webpack with a webpack config file and start implementing some basic rules. 
+
+### 3. 
