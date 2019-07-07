@@ -6,7 +6,7 @@ If you want to follow along, start from master and look at the numbered branches
 
 ## Get Up and Running
 
-** To start from the beginning: **
+*To start from the beginning:*
 - clone/download master
 - run ```npm install```
 - run ```npm start``` to start the app
