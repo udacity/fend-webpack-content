@@ -6,13 +6,13 @@ If you want to follow along, start from master and look at the numbered branches
 
 ## Get Up and Running
 
-*To start from the beginning:*
+**To start from the beginning:**
 - clone/download master
 - run ```npm install```
 - run ```npm start``` to start the app
 - this app runs on localhost:3000, but you can of course edit that in server.js
 
-** To skip to the end: **
+**To skip to the end:**
 - clone/download branch step4-add-service-workers (or the highest branch number)
 
 ## Breakdown of steps:
