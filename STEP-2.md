@@ -1,8 +1,6 @@
 # Step 2 - Webpack Entry 
 
-1. Webpack is going to create a map of our app dependencies, but to make a map you need to start somewhere. In our webpack config, we can declare a starting point for our app. 
-
-To do this, we need to add this line to the module.exports of our webpack config
+1. Webpack is going to create a map of our app dependencies, but to make a map you need to start somewhere. In our webpack config, we can declare a starting point for our app. To do this, we need to add this line to the module.exports of our webpack config
 
 ```
 entry: './src/client/index.js',
