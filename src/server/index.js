@@ -1,23 +1,22 @@
+var path = require('path')
 const express = require('express')
+const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
-app.use(express.static('src/public'));
 
-var json = {
-    'title': 'test json response',
-    'message': 'this is a message',
-    'time': 'now'
-}
+app.use(express.static('src/client'))
+
+console.log(__dirname)
 
 app.get('/', function (req, res) {
-    res.sendFile('/views/index.html', { root: __dirname });
-})
-
-app.get('/test', function (req, res) {
-    res.send(json);
+    res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(3000, function () {
+app.listen(8080, function () {
     console.log('Example app listening on port 3000!')
+})
+
+app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
 })

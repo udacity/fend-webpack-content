@@ -3,22 +3,43 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <script type="text/javascript" src="/index.js"></script>
+        <script type="text/javascript" src="/js/nameChecker.js"></script>
+        <script type="text/javascript" src="/js/formHandler.js"></script>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
     </head>
+
     <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
         <main>
-            <form class="" action="index.html" method="post" onsubmit="return handleSubmit(event)">
-                <input type="text" name="input" value="" onblur="onBlur()">
-                <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-            </form>
+            <section>
+                <form class="" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            <section>
 
-            <section id="results">
-
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results"></div>
             </section>
         </main>
 
         <footer>
             <p>This is a footer</p>
         </footer>
+
     </body>
 </html>
