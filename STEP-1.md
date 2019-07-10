@@ -4,3 +4,5 @@
 ```
 npm i webpack webpack-cli
 ```
+
+You have been successful when you see webpack and webpack-cli added to your package.json dependencies
