@@ -6,7 +6,7 @@
 entry: './src/client/index.js',
 ```
 
-2. Create the file at that address. For now, it can be mostly empty, with just an alert.
+2. Create a new index.js file at the address above. For now, it can be mostly empty, with just an alert.
 
 3. Experiment by running the webpack build script. Take a look at the dist folder that appears after a successful webpack build.
 
