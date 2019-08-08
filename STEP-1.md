@@ -8,9 +8,10 @@ npm i webpack webpack-cli
 You have been successful when you see webpack and webpack-cli added to your package.json dependencies
 
 2. Get the basic webpack config up and running:
--[ ] Create a webpack.config.js file in the project root
--[ ] Add the new build npm script to your package.json ``` "build": "webpack" ```
--[ ] Fill your webpack config.js with the code below:
+
+- [ ] Create a webpack.config.js file in the project root
+- [ ] Add the new build npm script to your package.json ``` "build": "webpack" ```
+- [ ] Fill your webpack config.js with the code below:
 
 ```
 const path = require("path") 
