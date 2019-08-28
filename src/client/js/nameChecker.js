@@ -8,8 +8,6 @@ function checkForName(inputText) {
         "Georgiou"
     ]
 
-    let x = 20 * (2 + 4;
-
     if(names.includes(inputText)) {
         alert("Welcome, Captain!")
     }
