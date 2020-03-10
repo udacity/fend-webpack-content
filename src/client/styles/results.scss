@@ -1,0 +1,21 @@
+.results{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   margin-top: 40px;
+   font-size: 24px;
+   font-family: "Gill Sans", sans-serif;
+}
+
+#response {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: "Gill Sans", sans-serif;
+    border: 5px solid palevioletred;
+    width: 50%;
+    height: 30px;
+    color: darkmagenta;
+}

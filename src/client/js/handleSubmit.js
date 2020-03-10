@@ -8,8 +8,7 @@ function handleSubmit(event) {
     fetch(`http://localhost:8080/api/polarity/${formText}`)
     .then(res => res.text())
     .then((res) => {
-        // console.log(res);
-        document.getElementById('results').innerHTML = res
+        document.getElementById('response').innerHTML = res
     })
 }
 

@@ -9,9 +9,7 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
+            <div class="logo"></div>
             <div class="">
                 navigation
             </div>
@@ -19,16 +17,17 @@
 
         <main>
             <section>
-                <form class="">
-                    <p>Type a short sentence or phrase below and find out it's positivity score!</p>
+                <div class="form">
+                <form>
+                    <p id="intro">Type a short sentence or phrase below and find out it's positivity score!</p>
                     <input id="name" type="text" name="input" value="" placeholder="Your input">
-                    <input id="submit" type="submit" name="submit" value="submit">
+                    <input id="submit" type="submit" name="submit" value="Submit">
                 </form>
-            <section>
-
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+            </div>
+                <div class="results">
+                        <p>Your input's rating is:</p>
+                </div>
+                <div id="response"></div>
             </section>
         </main>
 

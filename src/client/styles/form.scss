@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+#intro {
+    font-size: 24px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+input {
+    padding: 5px 20px;
+    line-height: 24px;
+    margin: 10px 0;
+    width: 80%;
+    font-size: 24px;
+    font-family: "Gill Sans", sans-serif;
+    border-radius: 2px;
+    text-align: center;
+}
+
+#submit {
+    width: 50%;
+    margin-top: 30px;
+    margin: 0 auto;
+    margin-left: 140px;
+    background: palevioletred;
+    color: white;
+    text-decoration-style: double;
+    border-radius: 5px;
+    // align-items: center;
+    text-align: center;
+}

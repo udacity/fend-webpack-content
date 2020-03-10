@@ -2,7 +2,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const path = require('path');
 const express = require('express');
-const mockAPIResponse = require('./mockAPI.js');
 const aylien = require('aylien_textapi');
 const bodyParser = require('body-parser');
 const app = express();
@@ -22,7 +21,6 @@ app.get('/api/polarity/:value', (req, res) => {
         application_id: process.env.API_ID,
         application_key: process.env.API_KEY
     });
-  
     textapi.sentiment(
         {
           text: req.params.value,
@@ -31,8 +29,7 @@ app.get('/api/polarity/:value', (req, res) => {
         (error, response) => {
           if (error === null) {
             console.log(response);
-            res.send(`Your input is: ${response.polarity} \n 
-            With a confidence level of ${response.polarity_confidence.toFixed(3)}`);
+            res.send(`${response.polarity.charAt(0).toUpperCase() + response.polarity.slice(1)}, with a confidence level of ${response.polarity_confidence.toFixed(3)}`);
           } else {
             console.log(error);
             res.status(500).send('Something went wrong!');
