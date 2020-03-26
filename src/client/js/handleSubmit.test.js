@@ -1,5 +1,8 @@
-const { handleSubmit } = require("./handlesubmit.js");
+jest.mock('././handleSubmit.js')
 
-test('the api is returning a value', () => {
-    expect(res) .toBeDefined();
-})
+test('should return value', () => {
+    const func = async function handleSubmit(e) {
+        const data = generateText('dinosaur');
+        expect(data).toBe('dinosaur');
+    }
+});

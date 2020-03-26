@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <script type="text-javascript" src="../../../dist/main.js"></script>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Text evaluation</title>
+    
+  </head>
 
-    <body>
+  <body>
+    <header>
+      <div class="logo"></div>
+    </header>
 
-        <header>
-            <div class="logo"></div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+    <main>
+      <section>
+        <div class="form">
+          <form onsubmit="return Client.handleSubmit(event)">
+            <p id="intro">
+              Type a short sentence or phrase below and find out it's positivity
+              score!
+            </p>
+            <input
+              id="name"
+              type="text"
+              name="input"
+              value=""
+              placeholder="Your input" 
+              required
+            >
+            <input
+              id="submit"
+              onclick="return validate()"
+              type="submit"
+              name="submit"
+              value="Submit"
+            />
+          </form>
+        </div>
+        <h2>Your input's rating is: </h2> 
+        <div class="results">
+        <div id="polarity"></div>
+        <!-- <div id="subjectivity"></div><br> -->
+        <div id="polarity_confidence"></div>
+        <!-- <div id="subjectivity_confidence"></div><br> -->
+      </div>
+      </section>
+    </main>
 
-        <main>
-            <section>
-                <div class="form">
-                <form>
-                    <p id="intro">Type a short sentence or phrase below and find out it's positivity score!</p>
-                    <input id="name" type="text" name="input" value="" placeholder="Your input">
-                    <input id="submit" type="submit" name="submit" value="Submit">
-                </form>
-            </div>
-                <div class="results">
-                        <p>Your input's rating is:</p>
-                </div>
-                <div id="response"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
+    <footer>
+      <p>Hooray!</p>
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
 </html>
