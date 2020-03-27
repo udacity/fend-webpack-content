@@ -8,7 +8,6 @@
 
   <body>
     <header>
-      <div class="logo"></div>
     </header>
 
     <main>
@@ -29,7 +28,6 @@
             >
             <input
               id="submit"
-              onclick="return validate()"
               type="submit"
               name="submit"
               value="Submit"
@@ -50,12 +48,21 @@
       <p>Hooray!</p>
     </footer>
     <script>
-      // Check that service workers are supported
       if ("serviceWorker" in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js");
-        });
+        navigator.serviceWorkerContainer
+          .register("./service-worker.js")
+          .then(function(registration) {
+            console.log(
+              "ServiceWorker registration successful with scope: ",
+              registration.scope
+            );
+          })
+          .catch(function(err) {
+            //registration failed :(
+            console.log("ServiceWorker registration failed: ", err);
+          });
+      } else {
+        console.log("No service-worker on this browser");
       }
     </script>
   </body>
