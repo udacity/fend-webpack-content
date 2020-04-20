@@ -1,5 +1,6 @@
 const path = require("path")
 const webpack = require('webpack')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 
 /**
@@ -16,6 +17,13 @@ module.exports = {
                 test: '/\.js$/',
                 exclude: /node_modules/,
                 loader: "bable-loader"
+            },
+            {
+                test: /(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'images'
+                }
             }
         ]
     }

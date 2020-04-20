@@ -1,6 +1,5 @@
 import { handleSubmit } from './js/formHandler'
 import { checkForName } from './js/nameChecker'
-
-console.log(checkForName);
+import img from './resources/JavaScript_Arrays.png'
 
 alert('I exist')
