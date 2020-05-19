@@ -14,7 +14,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "aylien_textapi": "^0.7.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jest": "^26.0.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
