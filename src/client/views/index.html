@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title>Test</title>
         <link rel="stylesheet" href="main.css">
-    </head>
+<!--         <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+ -->    </head>
 
     <body>
 
@@ -20,14 +21,20 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input id="url" type="text" name="input" value="" placeholder="Please insert a URL">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+                <form class="" onsubmit="return Client.handleNameSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Please insert a Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleNameSubmit(event)" onsubmit="return Client.handleNameSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <strong>NLP Results:</strong>
+                <div id="language"></div>
+                <div id="label"></div>
+                <div id="confidence"></div>
             </section>
         </main>
 
