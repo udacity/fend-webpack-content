@@ -1,12 +1,11 @@
 {
-  "name": "example-project",
+  "name": "webpack-express",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +13,8 @@
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
