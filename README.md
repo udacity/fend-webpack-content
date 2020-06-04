@@ -1,5 +1,4 @@
- "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
+
 # Webpack Express Example App
 
 The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
