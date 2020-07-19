@@ -2,7 +2,7 @@ var path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser') // Middleware
 const cors = require('cors') // Cross-origin allowance
-const mockAPIResponse = require('./mockAPI.js')
+/* const mockAPIResponse = require('./mockAPI.js') */
 const AYLIENtextAPI = require("aylien_textapi") // SDK from Aylien to make API calls
 const fetch = require('node-fetch'); // Node JS Fetch
 
@@ -46,27 +46,21 @@ app.get('/', function (req, res) {
 })
 
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
-
-
-async function aylienAnalysis(inputURL) {
+function aylienAnalysis(req, res) {
     console.log("Sending URL to Aylien")
-    let analysis = await textapi.classify({
-            url: inputURL,
+    textapi.classify({
+            url: req.body.url,
         },
         function(error, response) {
             if (error === null) {
-                return response
+                res.send(response)
             }
-        }).then(console.log(analysis));
+        })
 }
 
-app.post('/aylien', function (req, response) {
-    let url = req.body.url
-    console.log(url)
-    aylienAnalysis(url).then(res => res.json()).then(function(data) {
-            response.send(data)
-        }).catch(err => console.error(err)); 
+app.post('/aylien', aylienAnalysis)
+
+/* app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
 })
+ */
