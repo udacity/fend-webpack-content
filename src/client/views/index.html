@@ -3,41 +3,51 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
+        <link rel="stylesheet" href="main.css">
+<!--         <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+ -->    </head>
 
     <body>
 
         <header>
             <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+                <h1>Aylien Analysis</h1>
             </div>
         </header>
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="Please insert a URL">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
+<!--                 <form class="" onsubmit="return Client.handleNameSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Please insert a Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleNameSubmit(event)" onsubmit="return Client.handleNameSubmit(event)">
+                </form> -->
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <strong>NLP Results:</strong>
+                <ul>
+                    <li><b>Language:</b> <div class="inline" id="language"></div></li>
+                    <li><b>Label:</b> <div class="inline" id="label"></div></li>
+                    <li><b>Confidence:</b> <div class="inline" id="confidence"></div></li>
+                </ul>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Udacity Project 4 - NLP Analysis</p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>
