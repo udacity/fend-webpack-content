@@ -1,6 +1,6 @@
 function isURL(str)
 {
- var regexp = /https?:\/\/www./;
+ var regexp = /https?:\/\//;
         if (regexp.test(str))
         {
           return true;

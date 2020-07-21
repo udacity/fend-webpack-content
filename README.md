@@ -11,8 +11,15 @@ A simple webpage lets the user submit a URL. A JS function `isURL` validates wit
 A NodeJS server listens for POST requests to the `/aylien` endpoint. Upon receiving the request from the client, the server sends the request via the [Aylien NodeJS SDK](https://docs.aylien.com/newsapi/sdks/#javascript-node-js-sdk) to the Aylien service. The response is returned to the client to update the webpage. 
 
 ## Pre-requisites
-
-The repo does not include the necessary Node Modules nor the private API key for Aylien. Both are required to run the app. 
+### API Key
+To run the Aylien analysis an API key is needed. You will need to register for your own key and store it in an .env file.
+### Get Started
+1. Install Node JS and the various dependent packages listed in `package.js`
+2. Run `npm run build-prod` to update the `dist` folder with `index.html`, `main.css` and `main.js`
+3. Run the `server.js` file via the terminal by running `npm run start` in the respective directory
+4. Open the web page on your browser at `http://localhost:8081/`
+5. Enter a valid URL into the input box (e.g. `https://techcrunch.com/2015/07/16/microsoft-will-never-give-up-on-mobile/?guccounter=1`)
+6. Click on the `submit` button to GET the Aylien analysis and display it in the webpage
 
 ## Tests
 
