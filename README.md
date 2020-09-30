@@ -11,7 +11,7 @@ If you are just starting this process, start from branch 0-initial-setup. Otherw
 - [5-webpack-mode](https://github.com/udacity/fend-webpack-content/tree/5-webpack-mode)
 - [6-webpack-for-convenience](https://github.com/udacity/fend-webpack-content/tree/6-webpack-for-convenience)
 
-Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own Projects. 
 
 ## What we will cover
 
