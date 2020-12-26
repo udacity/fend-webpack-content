@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js"
+    "start": "node src/server/index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
