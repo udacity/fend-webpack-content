@@ -25,3 +25,7 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 - ```npm install```
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in index.js
+
+Remember that if you ever get stumped or break your code, you can always check out a fresh start from the git repo. You can check out a specific git branch from a repo with this command:
+
+`git clone --single-branch --branch <branchname> <remote-repo>`
