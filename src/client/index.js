@@ -9,3 +9,4 @@ import "./styles/header.scss";
 console.log(checkForName);
 
 alert("I exist!");
+export { checkForName, handleSubmit };
