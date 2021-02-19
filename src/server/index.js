@@ -28,10 +28,14 @@ app.listen(8081, function() {
 app.post("/analyze", async function(req, res) {
   res.status = 200;
   analyzeUrl = req.body.url;
+
   if (analyzeUrl === "") {
     res.status = 400;
     res.send();
+    console.log("ERROR: no url given");
+    return;
   }
+
   let meaningResult = await meaningAPIResponse(
     "https://api.meaningcloud.com/sentiment-2.1",
     {
@@ -40,5 +44,5 @@ app.post("/analyze", async function(req, res) {
     }
   );
   res.send(meaningResult);
-  console.log("analyze finished...");
+  console.log("analysis completed...");
 });

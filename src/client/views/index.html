@@ -3,18 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Meaning of life finder</title>
 </head>
 
 <body>
     <div id="background">
         <header>
-            <!-- <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div> -->
             <div id="title">Find out about the answer to life, the universe and everything...</div>
         </header>
 
@@ -26,10 +20,14 @@
                         onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
-
-            <section>
-                <h1>The answer is 42. It might also be:</h1>
-                <div id="results">here</div>
+            <section id="resultbox">
+                <h1>The answer is 42. If not, it might also be:</h1>
+                <div id="results">
+                </div>
+                <div class="lds-ripple" id="spinner">
+                    <div></div>
+                    <div></div>
+                </div>
             </section>
         </main>
 

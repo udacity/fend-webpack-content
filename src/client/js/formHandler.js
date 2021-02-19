@@ -1,5 +1,6 @@
 export { handleSubmit };
-
+const spinner = document.getElementById("spinner");
+const resultText = document.getElementById("results");
 let postData;
 
 async function getResponse(url) {
@@ -7,7 +8,7 @@ async function getResponse(url) {
   const response = await fetch("http://localhost:8081/analyze", {
     method: "POST",
     credentials: "same-origin",
-    mode: "cors", // no-cors, *cors, same-origin
+    mode: "cors",
     body: JSON.stringify(postData),
     headers: {
       "Content-Type": "application/json"
@@ -19,13 +20,14 @@ async function getResponse(url) {
 
 async function updateUi(text) {
   console.log(text);
-  let content = document.getElementById("results");
-  content.innerHTML = text.score_tag;
+  spinner.style.visibility = "hidden";
+  resultText.innerHTML = text.score_tag;
 }
 
 async function handleSubmit(event) {
   event.preventDefault();
-
+  resultText.innerHTML = "";
+  spinner.style.visibility = "visible";
   let formText = document.getElementById("url").value;
   postData = {
     url: formText
