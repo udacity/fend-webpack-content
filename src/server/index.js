@@ -2,6 +2,7 @@ var path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
 const meaningAPIResponse = require("./meaningAPI.js");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
@@ -9,6 +10,7 @@ dotenv.config();
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static("dist"));
 
@@ -25,15 +27,18 @@ app.listen(8081, function() {
 
 app.post("/analyze", async function(req, res) {
   res.status = 200;
-
+  analyzeUrl = req.body.url;
+  if (analyzeUrl === "") {
+    res.status = 400;
+    res.send();
+  }
   let meaningResult = await meaningAPIResponse(
     "https://api.meaningcloud.com/sentiment-2.1",
     {
-      url:
-        "https://ethereum.stackexchange.com/questions/70038/async-handlesubmitevent-not-working",
+      url: analyzeUrl,
       apikey: process.env.API_KEY
     }
   );
-  console.log(meaningResult);
   res.send(meaningResult);
+  console.log("analyze finished...");
 });

@@ -10,9 +10,6 @@ let response = async function getResponse(url, data = {}) {
       body: data
     }
   ).then(res => res.json());
-  // .then(json => console.log(json));
-
-  //   console.log(returnValue);
   return returnValue;
 };
 
