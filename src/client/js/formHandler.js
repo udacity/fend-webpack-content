@@ -5,10 +5,8 @@ export { handleSubmit, getResponse };
 const spinner = document.getElementById("spinner");
 const resultText = document.getElementById("results");
 
-let postData;
-
-async function getResponse(url) {
-  console.log(postData);
+async function getResponse(postData) {
+  // console.log(postData);
   const response = await fetch("http://localhost:8081/analyze", {
     method: "POST",
     credentials: "same-origin",
@@ -23,7 +21,7 @@ async function getResponse(url) {
 }
 
 async function updateUi(data) {
-  console.log(data);
+  // console.log(data);
   spinner.style.visibility = "hidden";
   resultText.innerHTML =
     "Agreement: " +
@@ -39,15 +37,13 @@ async function handleSubmit(event) {
   resultText.innerHTML = "";
   let formText = document.getElementById("url").value;
 
-  console.log("bin da.");
   if (!isValidUrl(formText)) {
     alert("url invalid");
     return;
   }
   spinner.style.visibility = "visible";
-
-  postData = {
+  let postData = {
     url: formText
   };
-  let result = await getResponse(formText).then(data => updateUi(data));
+  await getResponse(postData).then(data => updateUi(data));
 }

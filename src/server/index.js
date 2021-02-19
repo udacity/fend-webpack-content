@@ -28,7 +28,7 @@ app.listen(8081, function() {
 app.post("/analyze", async function(req, res) {
   res.status = 200;
   analyzeUrl = req.body.url;
-  console.out(analyzeUrl);
+  console.log(analyzeUrl);
   if (analyzeUrl === "") {
     res.status = 400;
     res.send();
