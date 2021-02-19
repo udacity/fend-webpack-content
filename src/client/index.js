@@ -1,5 +1,5 @@
 import { handleSubmit } from "./js/formHandler";
-import { checkForName } from "./js/nameChecker";
+import { isValidUrl } from "./js/isValidUrl";
 import "./styles/resets.scss";
 import "./styles/base.scss";
 import "./styles/footer.scss";
@@ -9,6 +9,4 @@ import MyImage from "./images/background.jpg";
 import ButtonBackgroundImage from "./images/button_background.png";
 import "regenerator-runtime/runtime";
 
-console.log(checkForName);
-
-export { checkForName, handleSubmit };
+export { isValidUrl, handleSubmit };

@@ -1,6 +1,10 @@
-export { handleSubmit };
+import { isValidUrl } from "./isValidUrl";
+
+export { handleSubmit, getResponse };
+
 const spinner = document.getElementById("spinner");
 const resultText = document.getElementById("results");
+
 let postData;
 
 async function getResponse(url) {
@@ -18,17 +22,30 @@ async function getResponse(url) {
   return response;
 }
 
-async function updateUi(text) {
-  console.log(text);
+async function updateUi(data) {
+  console.log(data);
   spinner.style.visibility = "hidden";
-  resultText.innerHTML = text.score_tag;
+  resultText.innerHTML =
+    "Agreement: " +
+    data.agreement +
+    "\tScore Tag: " +
+    data.score_tag +
+    "\tSubjectivity: " +
+    data.subjectivity;
 }
 
 async function handleSubmit(event) {
   event.preventDefault();
   resultText.innerHTML = "";
-  spinner.style.visibility = "visible";
   let formText = document.getElementById("url").value;
+
+  console.log("bin da.");
+  if (!isValidUrl(formText)) {
+    alert("url invalid");
+    return;
+  }
+  spinner.style.visibility = "visible";
+
   postData = {
     url: formText
   };
