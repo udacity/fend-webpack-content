@@ -1,5 +1,9 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
+  color: lightgrey;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }

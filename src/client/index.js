@@ -5,8 +5,10 @@ import "./styles/base.scss";
 import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
+import MyImage from "./images/background.jpg";
+import ButtonBackgroundImage from "./images/button_background.png";
+import "regenerator-runtime/runtime";
 
 console.log(checkForName);
 
-alert("I exist!");
 export { checkForName, handleSubmit };

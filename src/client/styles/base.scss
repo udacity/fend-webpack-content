@@ -2,12 +2,26 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   main {
     flex: 2;
-
     section {
       max-width: 800px;
       margin: 50px auto;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: lightgrey;
+      h1 {
+        font-size: 24px;
+        text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+      }
+      #results {
+        background: rgba(81, 83, 84, 0.4);
+        padding: 20px;
+        font-size: 20px;
+      }
     }
   }
 }

@@ -1,11 +1,33 @@
 form {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #545454;
-  border-radius: 3px;
+  background: rgba(81, 83, 84, 0.4);
+  border-radius: 20px;
   padding: 40px;
+  align-items: center;
+  justify-items: center;
+  font-size: 20px;
   input {
+    font-size: 20px;
+    display: flex;
     padding: 5px 20px;
-    width: 100%;
+    width: 90%;
     line-height: 16px;
-    margin: 10px 0;
+    margin: 10px;
+    box-shadow: 2px 4px 5px white;
+    &:hover {
+      box-shadow: 2px 2px 2px blue;
+    }
+    &:active {
+      box-shadow: 2px 2px 2px green;
+    }
+  }
+  .button {
+    background-image: url("../images/button_background.png");
+    border: none;
+    color: lightgrey;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    padding: 10px;
   }
 }

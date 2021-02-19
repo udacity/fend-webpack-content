@@ -7,43 +7,45 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="">
+    <div id="background">
+        <header>
+            <!-- <div class="">
             Logo
         </div>
         <div class="">
             navigation
-        </div>
-    </header>
+        </div> -->
+            <div id="title">Find out about the answer to life, the universe and everything...</div>
+        </header>
 
-    <main>
-        <section>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
-                    onsubmit="return Client.handleSubmit(event)">
-            </form>
-        </section>
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" onblur="onBlur()" placeholder="URL to analyze">
+                    <input class="button" type="submit" name="" value="Make it so!"
+                        onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
 
-        <section>
-            <strong>Form Results:</strong>
-            <div id="results"></div>
-        </section>
-    </main>
+            <section>
+                <h1>The answer is 42. It might also be:</h1>
+                <div id="results">here</div>
+            </section>
+        </main>
 
-    <footer>
-        <p>This is a footer</p>
-    </footer>
-    <script>
-        // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
-    </script>
+        <footer>
+
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </div>
 </body>
 
 </html>
