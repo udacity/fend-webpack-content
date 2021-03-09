@@ -1,1 +1,1 @@
-alert("I exist!");
+(()=>{"use strict";alert("I exist!")})();
