@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js"
   },
@@ -11,6 +12,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
   }
 }
