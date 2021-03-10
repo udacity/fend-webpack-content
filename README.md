@@ -18,7 +18,7 @@ Each one is a step along the path to creating a fully functional webpack setup. 
 Fork this repo, then clone your forked repo down to your computer:
 
 ```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
+git clone -- git@github.com:[your-user-name]/fend-webpack-content.git --
 ```
 
 `cd` into your new folder and run:
