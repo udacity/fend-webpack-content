@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require("path")
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
@@ -6,6 +7,9 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    devServer: {
+        port: 8000,
+    },
     module: {
         rules: [
                 {
