@@ -11,9 +11,6 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies":{
-    "webpack-dev-server": "^3.11.0"
-  },
   "dependencies": {
     "express": "^4.17.1",
     "webpack": "^5.25.0",
