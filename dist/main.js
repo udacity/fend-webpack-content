@@ -16,7 +16,7 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_formHandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/formHandler */ \"./src/client/js/formHandler.js\");\n/* harmony import */ var _js_nameChecker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/nameChecker */ \"./src/client/js/nameChecker.js\");\n\r\n\r\n\r\nconsole.log(_js_nameChecker__WEBPACK_IMPORTED_MODULE_1__.checkForName);\r\n\r\nalert(\"starting point\");\r\n\n\n//# sourceURL=webpack://example-project/./src/client/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_formHandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/formHandler */ \"./src/client/js/formHandler.js\");\n/* harmony import */ var _js_nameChecker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/nameChecker */ \"./src/client/js/nameChecker.js\");\n\r\n\r\n\r\nconsole.log(_js_formHandler__WEBPACK_IMPORTED_MODULE_0__.handleSubmit);\r\nconsole.log(_js_nameChecker__WEBPACK_IMPORTED_MODULE_1__.checkForName);\r\n\r\nalert(\"starting point\");\r\n\n\n//# sourceURL=webpack://example-project/./src/client/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"handleSubmit\": () => (/* binding */ handleSubmit)\n/* harmony export */ });\nfunction handleSubmit(event) {\r\n    event.preventDefault()\r\n\r\n    // check what text was put into the form field\r\n    let formText = document.getElementById('name').value\r\n    checkForName(formText)\r\n\r\n    console.log(\"::: Form Submitted :::\")\r\n    fetch('http://localhost:8080/test')\r\n    .then(res => res.json())\r\n    .then(function(res) {\r\n        document.getElementById('results').innerHTML = res.message\r\n    })\r\n}\r\n\n\n//# sourceURL=webpack://example-project/./src/client/js/formHandler.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"handleSubmit\": () => (/* binding */ handleSubmit)\n/* harmony export */ });\nfunction handleSubmit(event) {\r\n  event.preventDefault();\r\n\r\n  // check what text was put into the form field\r\n  let formText = document.getElementById(\"name\").value;\r\n  checkForName(formText);\r\n\r\n  console.log(\"::: Form Submitted :::\");\r\n  fetch(\"http://localhost:8080/test\")\r\n    .then((res) => res.json())\r\n    .then(function (res) {\r\n      document.getElementById(\"results\").innerHTML = res.message;\r\n    });\r\n}\r\n\n\n//# sourceURL=webpack://example-project/./src/client/js/formHandler.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"checkForName\": () => (/* binding */ checkForName)\n/* harmony export */ });\nfunction checkForName(inputText) {\r\n    console.log(\"::: Running checkForName :::\", inputText);\r\n    let names = [\r\n        \"Picard\",\r\n        \"Janeway\",\r\n        \"Kirk\",\r\n        \"Archer\",\r\n        \"Georgiou\"\r\n    ]\r\n\r\n    if(names.includes(inputText)) {\r\n        alert(\"Welcome, Captain!\")\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack://example-project/./src/client/js/nameChecker.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"checkForName\": () => (/* binding */ checkForName)\n/* harmony export */ });\nfunction checkForName(inputText) {\r\n  console.log(\"::: Running checkForName :::\", inputText);\r\n  let names = [\"Picard\", \"Janeway\", \"Kirk\", \"Archer\", \"Georgiou\"];\r\n\r\n  if (names.includes(inputText)) {\r\n    alert(\"Welcome, Captain!\");\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://example-project/./src/client/js/nameChecker.js?");
 
 /***/ })
 

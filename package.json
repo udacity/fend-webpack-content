@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
+    "remove dist folder": "rm -rf dist",
     "build": "webpack"
   },
   "keywords": [],
@@ -21,6 +22,9 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.22.0",
+    "eslint-webpack-plugin": "^2.5.2",
+    "file-loader": "^6.2.0",
     "webpack-dev-server": "^3.11.0"
   }
 }
