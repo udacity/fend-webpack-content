@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #F5F6F7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7180AC;
 }
 
 main {
@@ -11,4 +14,10 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+footer {
+    display: block;
+    align-self: center;
+    padding: 50px 50px;
 }

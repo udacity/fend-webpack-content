@@ -1,3 +1,5 @@
+const results = document.getElementById('results')
+
 function checkForName(inputText) {
     console.log("::: Running checkForName :::", inputText);
     let names = [
@@ -9,7 +11,7 @@ function checkForName(inputText) {
     ]
 
     if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+        results.innerHTML = `<p>${inputText}</p>`
     }
 }
 

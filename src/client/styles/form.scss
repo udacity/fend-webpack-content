@@ -1,12 +1,42 @@
+$default-color: #e0e0e0;
+$primary-color: #1E212B;
+$secondary-color: #7180AC;
+
 form {
-    border: 1px solid #545454;
+    background-color: $primary-color;
     border-radius: 3px;
     padding: 40px;
+
+    input {
+        padding: 5px 20px;
+        width: 100%;
+        line-height: 16px;
+        margin: 10px 0;
+    }
+    #submit {
+        color: #fff;
+        background-color: $secondary-color;
+        border: none;
+    }
+    #submit:active {
+        color: $default-color;
+        background-color: #8c9dce;
+        outline: none;
+    }
+    #submit {
+        outline: none;
+    }
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+#results-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    #results {
+        border: 1px solid #333;
+        width: 100%;
+        height: 400px;
+    }
 }

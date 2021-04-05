@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Natural Language Processor</title>
         <link rel="stylesheet" href="/styles/resets.scss">
         <link rel="stylesheet" href="/styles/base.scss">
         <link rel="stylesheet" href="/styles/header.scss">
@@ -13,30 +13,33 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <div><img class="logo" src="/media/Logo.png" alt=""></div>
+            <nav>
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>About</li></a>
+                </ul>
+            </nav>
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <label for="name">Enter URL here:</label>
+                    <input id="name" type="text" name="input" value="" placeholder="URL to Anylize">
+                    <input id="submit" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
+            <section id="results-section">
                 <strong>Form Results:</strong>
                 <div id="results"></div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Made with ☕️</p>
         </footer>
 
     </body>
