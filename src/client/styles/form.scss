@@ -3,11 +3,13 @@ $primary-color: #1E212B;
 $secondary-color: #7180AC;
 
 form {
-    background-color: $primary-color;
     border-radius: 3px;
     padding: 40px;
 
     input {
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         padding: 5px 20px;
         width: 100%;
         line-height: 16px;
@@ -18,6 +20,12 @@ form {
         background-color: $secondary-color;
         border: none;
     }
+
+    #submit:hover {
+        color: #fff;
+        background-color: #a0b0df;
+    }
+    
     #submit:active {
         color: $default-color;
         background-color: #8c9dce;
@@ -35,8 +43,8 @@ form {
     align-items: center;
     
     #results {
-        border: 1px solid #333;
+        // border: 1px solid #333;
         width: 100%;
-        height: 400px;
+        height: 150px;
     }
 }

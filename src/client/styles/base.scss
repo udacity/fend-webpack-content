@@ -5,19 +5,22 @@ body {
     background-color: #F5F6F7;
     font-family: Arial, Helvetica, sans-serif;
     color: #7180AC;
+    
+    main {
+        flex: 2;
+    }
+
+    section {
+        max-width: 800px;
+        margin: 50px auto;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 50px;
+        background-color: #ced7f1;
+    }
 }
 
-main {
-    flex: 2;
-}
-
-section {
-    max-width: 800px;
-    margin: 50px auto;
-}
-
-footer {
-    display: block;
-    align-self: center;
-    padding: 50px 50px;
-}

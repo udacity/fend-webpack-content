@@ -5,7 +5,6 @@ console.log(`Your API key is ${process.env.API_KEY}`)
 
 var path = require('path')
 
-const apiKey = process.env.API_KEY
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js');
 const { response } = require('express');

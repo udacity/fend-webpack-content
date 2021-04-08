@@ -1,41 +1,13 @@
 header {
+    background-color: #ced7f1;
+    width: 100vw;
+    height: 150px;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-
-    .logo {
-        max-width: 60px;
-    }
-    
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    
-    ul {
-        display: flex;
-        flex-direction: row;
-        
-        li {
-            color: #7180ac;
-            padding: 0 5px;
-        }
-        
-        a {
-            text-decoration: none;
-            background: 
-                linear-gradient(currentColor 0 0) 
-                0 100% /var(--d, 0) 3px 
-                no-repeat;
-                transition:0.5s;
-            }
-            
-        a:hover {
-          --d: 100%;
-        }
+
+    h1 {
+        font-size: 3rem;
+        color: aliceblue;
     }
 }
