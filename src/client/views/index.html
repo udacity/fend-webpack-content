@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Natural Language Processor</title>
+        <title>Sentiment Analysis</title>
         <link rel="stylesheet" href="/styles/resets.scss">
         <link rel="stylesheet" href="/styles/base.scss">
         <link rel="stylesheet" href="/styles/header.scss">
@@ -19,15 +19,21 @@
         <main>
             <section>
                 <form class="" onsubmit="return handleSubmit(event)">
-                    <label for="name">Enter URL here:</label>
-                    <input id="name" type="text" name="input" value="" placeholder="URL to Anylize">
+                    <label for="url">Enter URL here</label>
+                    <input id="url" type="text" name="url" value="" placeholder="https://example.com">
                     <input id="submit" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section id="results-section">
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <p id="score-tag"></p>
+                    <p id="agreement"></p>
+                    <p id="confidence"></p>
+                    <p id="irony"></p>
+                    <p id="sentence-list"></p>
+                </div>
             </section>
         </main>
 
