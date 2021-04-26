@@ -2,42 +2,44 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <title>Sentiment Analysis</title>
+        <link rel="stylesheet" href="/styles/resets.scss">
+        <link rel="stylesheet" href="/styles/base.scss">
+        <link rel="stylesheet" href="/styles/header.scss">
+        <link rel="stylesheet" href="/styles/form.scss">
+        <link rel="stylesheet" href="/styles/footer.scss">
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <h1>Sentiment Analysis</h1>
+            <h2>Evaluate a news article or blog post to find the polarity of the text.</h2>
         </header>
 
         <main>
-            <section>
+            <section id="fudge">
                 <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <label for="url">Enter URL here</label>
+                    <input id="url" type="text" name="url" value="" placeholder="example.com">
+                    <input id="submit" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+            <section id="results-section">
+                <h2>Form Results:</h2>
+                <div id="results">
+                    <p id="score-tag"></p>
+                    <p id="agreement"></p>
+                    <p id="confidence"></p>
+                    <p id="irony"></p>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Made with ☕️</p>
         </footer>
-
+          
     </body>
 </html>
