@@ -14,25 +14,25 @@
 
         <header>
             <h1>Sentiment Analysis</h1>
+            <h2>Evaluate a news article or blog post to find the polarity of the text.</h2>
         </header>
 
         <main>
-            <section>
+            <section id="fudge">
                 <form class="" onsubmit="return handleSubmit(event)">
                     <label for="url">Enter URL here</label>
-                    <input id="url" type="text" name="url" value="" placeholder="https://example.com">
+                    <input id="url" type="text" name="url" value="" placeholder="example.com">
                     <input id="submit" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section id="results-section">
-                <strong>Form Results:</strong>
+                <h2>Form Results:</h2>
                 <div id="results">
                     <p id="score-tag"></p>
                     <p id="agreement"></p>
                     <p id="confidence"></p>
                     <p id="irony"></p>
-                    <p id="sentence-list"></p>
                 </div>
             </section>
         </main>
@@ -40,6 +40,6 @@
         <footer>
             <p>Made with ☕️</p>
         </footer>
-
+          
     </body>
 </html>

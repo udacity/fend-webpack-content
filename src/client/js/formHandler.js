@@ -5,7 +5,7 @@ function handleSubmit(event) {
     let formText = document.getElementById('url').value
     Client.checkUrl(formText)
 
-    console.log("::: Form Submitted :::")
+    console.log('URL Submitted')
     fetch('http://localhost:8081/analyze', {
         method: 'POST',
         headers: {
@@ -21,7 +21,6 @@ function handleSubmit(event) {
         document.getElementById('agreement').innerHTML = 'Contrast: ' + data.agreement
         document.getElementById('confidence').innerHTML = 'Confidence: ' + data.confidence
         document.getElementById('irony').innerHTML = 'Irony: ' + data.irony
-        document.getElementById('sentence-list').innerHTML = 'Total Sentences: ' + data.sentence_list
     })
 }
 

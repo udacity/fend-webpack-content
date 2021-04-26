@@ -17,11 +17,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
-const oneKey = {
-    application_key: process.env.API_KEY
-}
-
-console.log(oneKey);
 console.log(`Your API key is ${process.env.API_KEY}`)
 
 app.use(express.static('dist'))
@@ -40,10 +35,11 @@ app.get('/test', function (req, res) {
 })
 
 app.post('/analyze', function(req, res) {
-    const article = req.body.article,
-          URL = 'https://api.meaningcloud.com/sentiment-2.1',
+    const oneKey = process.env.API_KEY,
+          article = req.body.article,
+          yoda = 'https://api.meaningcloud.com/sentiment-2.1',
           conditions = `?key=${oneKey}&lang=en&model=general&url=${article}`,
-          analyzeArticle = URL + conditions;
+          analyzeArticle = yoda + conditions;
           
     fetch(analyzeArticle, {
         method: 'POST',
@@ -54,15 +50,12 @@ app.post('/analyze', function(req, res) {
         
     }) .then((response) => {
         return response.json()
-    }) .then((data) => {
-        console.log('Data from meaning cloud', data);
-        
+    }) .then((data) => {        
         res.send({
             score_tag: data.score_tag,
             agreement: data.agreement,
             confidence: data.confidence,
-            irony: data.irony,
-            sentence_list: data.sentence_list
+            irony: data.irony
         })
     });
 })

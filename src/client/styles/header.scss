@@ -1,14 +1,19 @@
 header {
-    background-color: #ced7f1;
+    background-color: #e4e4e4;
     width: 100vw;
-    height: 150px;
+    height: 450px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     h1 {
         font-size: 3rem;
-        color: aliceblue;
-        text-shadow: 1px 1px 3px #8f95a7b0;
+        color: #333;
+        }
+
+    h2 {
+        font-size: 1.2rem;
+        padding-top: 10px;
     }
 }
