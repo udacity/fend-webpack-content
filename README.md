@@ -1,5 +1,5 @@
 # Evaluate a News Article with Natural Language Processing
-
+---
 ## Description
 
 This project uses the MeaningCloud API for Sentiment Analysis
@@ -15,7 +15,3 @@ The goal of this project is to learn how to setup the following:
 * Service Workers
 * Fetching APIs
 * Setting up Jest
-
-## Deployment
-
----
