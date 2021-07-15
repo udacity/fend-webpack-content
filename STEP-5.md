@@ -28,7 +28,7 @@ If you choose option 2 and declare mode in the webpack config, then you’ll hav
 
 From what I have seen, option 2 is a bit more common. And that is the way we’ll go.
 
-Go ahead a rename the webpack config file we have to webpack.dev.js and create a new one, also at root, called webpack.prod.js. 
+Go ahead and rename the webpack config file we have to `webpack.dev.js` and create a new one, also at root, called `webpack.prod.js`. 
 
 Add the correct mode flag to each one:
 
