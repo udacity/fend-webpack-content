@@ -22,4 +22,4 @@ module.exports = {
 }
 ```
 
-You have been successful when you can run your npm script in the terminal and see a webpack error (the error is there of course because our config file is empty)
+You have been successful when you can run your npm script (`$ npm run build`) in the terminal and see a webpack error (the error is there of course because our config file is empty)
