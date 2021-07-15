@@ -8,7 +8,7 @@ app.use(express.static('src/client'))
 
 console.log(__dirname)
 
-app.get('/', function (req, res) {
+app.get('/', function (_req, res) {
     res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
 })
 
@@ -17,6 +17,6 @@ app.listen(8080, function () {
     console.log('Example app listening on port 8080!')
 })
 
-app.get('/test', function (req, res) {
+app.get('/test', function (_req, res) {
     res.send(mockAPIResponse)
 })
