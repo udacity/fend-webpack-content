@@ -36,11 +36,11 @@ Add the correct mode flag to each one:
 mode: "development"/"production"
 ```
 
-We also have to edit our npm script to use the correct files we run npm build. Your scripts will look like this:
+We also have to edit our npm script to use the correct files we run `npm run build`. Your scripts will look like this:
 
 ```
     "build-prod": "--config webpack.prod.js",
-    "build-dev": "--config webpack.prod.js"
+    "build-dev": "--config webpack.dev.js"
 ```
 
 
