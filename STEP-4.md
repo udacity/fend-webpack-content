@@ -46,8 +46,11 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-See how the file we are sending back from express is now the index.html file inside of dist? That is what we want. But we ought to carry this even further. Express was set up to find other assets as well - it expected all our css and js files to come from the client folder. But that won’t be the case any more, our assets are all going to be handled by webpack, so they are all going to come from the dist folder, so change this line:
+See how the file we are sending back from express is now the index.html file inside of dist? That is what we want. But we ought to carry this even further. Express was set up to find other assets as well - it expected all our css and js files to come from the client folder. But that won’t be the case any more, our assets are all going to be handled by webpack, so they are all going to come from the dist folder, so change the line below:
 
-app.use(express.static('src/client'))
+[src/server/index.js]
+```app.use(express.static('src/client'))``` 
+to this:
+```app.use(express.static('dist'))```
 
-**You have been successful when can run your express server and see our web page with no styles**
+**You have been successful when can run your express server and see the web page with NO styles**
