@@ -17,10 +17,11 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "babel-loader": "^8.2.3",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^8.3.0",
     "clean-webpack-plugin": "^4.0.0",
+    "html": "^1.0.0",
     "html-webpack-plugin": "^5.5.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",

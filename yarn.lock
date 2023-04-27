@@ -22,7 +22,7 @@
   resolved "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.21.4.tgz"
   integrity sha512-/DYyDpeCfaVinT40FPGdkkb+lYSKvsVuMjDAG7jPOWWiM1ibOaB9CXJAlc4d1QpP/U2q2P9jbrSlClKSErd55g==
 
-"@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.12.0", "@babel/core@^7.13.0", "@babel/core@^7.16.5", "@babel/core@^7.4.0-0":
+"@babel/core@^7.0.0", "@babel/core@^7.0.0-0", "@babel/core@^7.12.0", "@babel/core@^7.13.0", "@babel/core@^7.21.4", "@babel/core@^7.4.0-0":
   version "7.21.4"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.21.4.tgz"
   integrity sha512-qt/YV149Jman/6AfmlxJ04LMIu8bMoyl3RB91yTFrxQmgbrSvQMy7cI8Q62FHx1t8wJ8B5fu0UDoLwHAhUo1QA==
@@ -772,7 +772,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.18.6"
     "@babel/helper-plugin-utils" "^7.18.6"
 
-"@babel/preset-env@^7.16.5":
+"@babel/preset-env@^7.21.4":
   version "7.21.4"
   resolved "https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.21.4.tgz"
   integrity sha512-2W57zHs2yDLm6GD5ZpvNn71lZ0B/iypSdIeq25OurDKji6AdzV07qp4s3n1/x5BqtiGaTrPN3nerlSCaC5qNTw==
@@ -1381,7 +1381,7 @@ array-uniq@^1.0.1:
   resolved "https://registry.npmjs.org/array-uniq/-/array-uniq-1.0.3.tgz"
   integrity sha512-MNha4BWQ6JbwhFhj03YK552f7cb3AzoE8SzeljgChvL1dl3IcvggXVz1DilzySZkCja+CXuZbdW7yATchWn8/Q==
 
-babel-loader@^8.2.3:
+babel-loader@^8.3.0:
   version "8.3.0"
   resolved "https://registry.npmjs.org/babel-loader/-/babel-loader-8.3.0.tgz"
   integrity sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==
@@ -1642,6 +1642,16 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
+
+concat-stream@^1.4.7:
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/concat-stream/-/concat-stream-1.6.2.tgz"
+  integrity sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
+  dependencies:
+    buffer-from "^1.0.0"
+    inherits "^2.0.3"
+    readable-stream "^2.2.2"
+    typedarray "^0.0.6"
 
 connect-history-api-fallback@^2.0.0:
   version "2.0.0"
@@ -2211,6 +2221,13 @@ html-webpack-plugin@^5.5.1:
     lodash "^4.17.21"
     pretty-error "^4.0.0"
     tapable "^2.0.0"
+
+html@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/html/-/html-1.0.0.tgz"
+  integrity sha512-lw/7YsdKiP3kk5PnR1INY17iJuzdAtJewxr14ozKJWbbR97znovZ0mh+WEMZ8rjc3lgTK+ID/htTjuyGKB52Kw==
+  dependencies:
+    concat-stream "^1.4.7"
 
 htmlparser2@^6.1.0:
   version "6.1.0"
@@ -2908,6 +2925,19 @@ readable-stream@^2.0.1:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
+readable-stream@^2.2.2:
+  version "2.3.8"
+  resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz"
+  integrity sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.3"
+    isarray "~1.0.0"
+    process-nextick-args "~2.0.0"
+    safe-buffer "~5.1.1"
+    string_decoder "~1.1.1"
+    util-deprecate "~1.0.1"
+
 readable-stream@^3.0.6:
   version "3.6.2"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz"
@@ -3371,6 +3401,11 @@ type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typedarray@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
+  integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
