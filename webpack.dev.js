@@ -8,14 +8,24 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client',
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
+    },
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
-            }
-        ]
+                use: ["babel-loader"],
+            },
+            {
+                test: /\.scss$/,
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+        ],
     },
     plugins: [
         new HtmlWebPackPlugin({
@@ -31,5 +41,5 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         })
-    ]
+    ],
 }
