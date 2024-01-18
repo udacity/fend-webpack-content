@@ -9,6 +9,7 @@ module.exports = {
     devtool: 'source-map',
     stats: 'verbose',
     module: {
+        //Now, with that loader in place, we should be able to get going
         rules: [
             {
                 test: '/\.js$/',
