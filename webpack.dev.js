@@ -19,7 +19,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebPackPlugin({
+        new HtmlWebpackPlugin({
+            //this will go in the html folder in views and create a new html file in the dist folder for us
+            //now when you will run the build, you will find a file named html in your dist folder due to this plugin 
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
