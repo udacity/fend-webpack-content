@@ -1,0 +1,11 @@
+$primary-color: rgb(255, 0, 89);
+$font-w: 800;
+
+footer {
+    p {
+      color: $primary-color;
+      font-weight: $font-w;
+      text-decoration: underline;
+      font-style: italic;
+    }
+}
