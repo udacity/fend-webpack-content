@@ -1,5 +1,6 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { fetchApiData } from './js/formHandler';
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -14,5 +15,6 @@ alert("I EXIST")
 
 export {
     checkForName,
-    handleSubmit
+    handleSubmit,
+    fetchApiData
 }
