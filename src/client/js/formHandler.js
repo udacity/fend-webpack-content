@@ -16,7 +16,7 @@ async function handleSubmit(event) {
         document.getElementById('results').innerHTML = `<p>Location: ${data.name}</p>
         <p>Temperature: ${data.main.temp} °F</p>`
       } else {
-        document.getElementById('results').innerHTML = `<p>Invalid Zip Code!</p>`
+        document.getElementById('results').innerHTML = `<p>Error fetching Data!</p>`
       }
         
     }catch (error) {
